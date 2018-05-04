@@ -28,32 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox_Parameters = new System.Windows.Forms.GroupBox();
             this.groupBox_Strategy = new System.Windows.Forms.GroupBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox_CarParam = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox_TrackParam = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,11 +55,28 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.chart_Laptimes = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.strategy1 = new System.Windows.Forms.DataGridView();
+            this.PitLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strategy2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strategy3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TireWearCurve = new System.Windows.Forms.DataGridView();
+            this.Wear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fuelWeightCurve = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_Parameters.SuspendLayout();
             this.groupBox_Strategy.SuspendLayout();
             this.groupBox_CarParam.SuspendLayout();
             this.groupBox_TrackParam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Laptimes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strategy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strategy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strategy3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TireWearCurve)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fuelWeightCurve)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_Parameters
@@ -75,10 +85,10 @@
             this.groupBox_Parameters.Controls.Add(this.groupBox_CarParam);
             this.groupBox_Parameters.Controls.Add(this.groupBox_TrackParam);
             this.groupBox_Parameters.Location = new System.Drawing.Point(24, 23);
-            this.groupBox_Parameters.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox_Parameters.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox_Parameters.Name = "groupBox_Parameters";
-            this.groupBox_Parameters.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox_Parameters.Size = new System.Drawing.Size(1425, 403);
+            this.groupBox_Parameters.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox_Parameters.Size = new System.Drawing.Size(1821, 516);
             this.groupBox_Parameters.TabIndex = 1;
             this.groupBox_Parameters.TabStop = false;
             this.groupBox_Parameters.Text = "Parameters";
@@ -88,81 +98,48 @@
             // 
             this.groupBox_Strategy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox_Strategy.Controls.Add(this.strategy3);
+            this.groupBox_Strategy.Controls.Add(this.strategy2);
+            this.groupBox_Strategy.Controls.Add(this.strategy1);
             this.groupBox_Strategy.Controls.Add(this.textBox10);
             this.groupBox_Strategy.Controls.Add(this.textBox9);
             this.groupBox_Strategy.Controls.Add(this.textBox8);
-            this.groupBox_Strategy.Controls.Add(this.listBox3);
-            this.groupBox_Strategy.Controls.Add(this.listBox2);
-            this.groupBox_Strategy.Controls.Add(this.listBox1);
             this.groupBox_Strategy.Controls.Add(this.label10);
             this.groupBox_Strategy.Controls.Add(this.label9);
             this.groupBox_Strategy.Controls.Add(this.label8);
             this.groupBox_Strategy.Controls.Add(this.label11);
-            this.groupBox_Strategy.Location = new System.Drawing.Point(770, 37);
-            this.groupBox_Strategy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox_Strategy.Location = new System.Drawing.Point(1217, 37);
+            this.groupBox_Strategy.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox_Strategy.Name = "groupBox_Strategy";
-            this.groupBox_Strategy.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox_Strategy.Size = new System.Drawing.Size(638, 354);
+            this.groupBox_Strategy.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox_Strategy.Size = new System.Drawing.Size(592, 467);
             this.groupBox_Strategy.TabIndex = 2;
             this.groupBox_Strategy.TabStop = false;
             this.groupBox_Strategy.Text = "Strategy";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(450, 277);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox10.Location = new System.Drawing.Point(447, 424);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(6);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(104, 31);
             this.textBox10.TabIndex = 0;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(246, 277);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox9.Location = new System.Drawing.Point(245, 424);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(6);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(104, 31);
             this.textBox9.TabIndex = 0;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(52, 277);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox8.Location = new System.Drawing.Point(52, 424);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(6);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(104, 31);
             this.textBox8.TabIndex = 0;
-            // 
-            // listBox3
-            // 
-            this.listBox3.BackColor = System.Drawing.Color.Red;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 25;
-            this.listBox3.Location = new System.Drawing.Point(450, 71);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(116, 154);
-            this.listBox3.TabIndex = 0;
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.Khaki;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 25;
-            this.listBox2.Location = new System.Drawing.Point(246, 71);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(116, 154);
-            this.listBox2.TabIndex = 0;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(52, 71);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(116, 154);
-            this.listBox1.TabIndex = 0;
             // 
             // label10
             // 
@@ -200,7 +177,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(218, 235);
+            this.label11.Location = new System.Drawing.Point(216, 372);
             this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(169, 25);
@@ -212,43 +189,33 @@
             // 
             this.groupBox_CarParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox_CarParam.Controls.Add(this.fuelWeightCurve);
+            this.groupBox_CarParam.Controls.Add(this.TireWearCurve);
             this.groupBox_CarParam.Controls.Add(this.textBox7);
-            this.groupBox_CarParam.Controls.Add(this.textBox6);
             this.groupBox_CarParam.Controls.Add(this.label7);
             this.groupBox_CarParam.Controls.Add(this.label6);
-            this.groupBox_CarParam.Controls.Add(this.textBox5);
             this.groupBox_CarParam.Controls.Add(this.label5);
-            this.groupBox_CarParam.Controls.Add(this.textBox4);
-            this.groupBox_CarParam.Controls.Add(this.label4);
             this.groupBox_CarParam.Location = new System.Drawing.Point(350, 37);
-            this.groupBox_CarParam.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox_CarParam.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox_CarParam.Name = "groupBox_CarParam";
-            this.groupBox_CarParam.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox_CarParam.Size = new System.Drawing.Size(408, 354);
+            this.groupBox_CarParam.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox_CarParam.Size = new System.Drawing.Size(855, 467);
             this.groupBox_CarParam.TabIndex = 1;
             this.groupBox_CarParam.TabStop = false;
             this.groupBox_CarParam.Text = "Car param";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(288, 190);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox7.Location = new System.Drawing.Point(675, 95);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(6);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(104, 31);
             this.textBox7.TabIndex = 0;
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(288, 146);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(104, 31);
-            this.textBox6.TabIndex = 0;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 196);
+            this.label7.Location = new System.Drawing.Point(636, 54);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(182, 25);
@@ -259,51 +226,24 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 152);
+            this.label6.Location = new System.Drawing.Point(336, 54);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 25);
+            this.label6.Size = new System.Drawing.Size(181, 25);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Fuel weight Factor";
+            this.label6.Text = "Fuel weight curve";
             this.label6.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(288, 104);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(104, 31);
-            this.textBox5.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 110);
+            this.label5.Location = new System.Drawing.Point(18, 54);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 25);
+            this.label5.Size = new System.Drawing.Size(160, 25);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Wear/weight Factor";
+            this.label5.Text = "Tire wear curve";
             this.label5.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(288, 60);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(104, 31);
-            this.textBox4.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 65);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Wear fall off";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox_TrackParam
             // 
@@ -316,10 +256,10 @@
             this.groupBox_TrackParam.Controls.Add(this.textBox2);
             this.groupBox_TrackParam.Controls.Add(this.textBox1);
             this.groupBox_TrackParam.Location = new System.Drawing.Point(12, 37);
-            this.groupBox_TrackParam.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox_TrackParam.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox_TrackParam.Name = "groupBox_TrackParam";
-            this.groupBox_TrackParam.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox_TrackParam.Size = new System.Drawing.Size(326, 354);
+            this.groupBox_TrackParam.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox_TrackParam.Size = new System.Drawing.Size(326, 467);
             this.groupBox_TrackParam.TabIndex = 0;
             this.groupBox_TrackParam.TabStop = false;
             this.groupBox_TrackParam.Text = "Track param";
@@ -358,7 +298,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(206, 154);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(104, 31);
             this.textBox3.TabIndex = 0;
@@ -366,7 +306,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(206, 104);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(104, 31);
             this.textBox2.TabIndex = 0;
@@ -374,48 +314,196 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(206, 54);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(104, 31);
             this.textBox1.TabIndex = 0;
             // 
             // chart_Laptimes
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_Laptimes.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_Laptimes.Legends.Add(legend2);
-            this.chart_Laptimes.Location = new System.Drawing.Point(24, 438);
-            this.chart_Laptimes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            chartArea1.Name = "ChartArea1";
+            this.chart_Laptimes.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_Laptimes.Legends.Add(legend1);
+            this.chart_Laptimes.Location = new System.Drawing.Point(24, 597);
+            this.chart_Laptimes.Margin = new System.Windows.Forms.Padding(6);
             this.chart_Laptimes.Name = "chart_Laptimes";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Strategy 1";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "Strategy 2";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "Strategy 3";
-            this.chart_Laptimes.Series.Add(series4);
-            this.chart_Laptimes.Series.Add(series5);
-            this.chart_Laptimes.Series.Add(series6);
-            this.chart_Laptimes.Size = new System.Drawing.Size(1425, 632);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Strategy 1";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Strategy 2";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Strategy 3";
+            this.chart_Laptimes.Series.Add(series1);
+            this.chart_Laptimes.Series.Add(series2);
+            this.chart_Laptimes.Series.Add(series3);
+            this.chart_Laptimes.Size = new System.Drawing.Size(1821, 467);
             this.chart_Laptimes.TabIndex = 2;
             this.chart_Laptimes.Text = "Laptimes";
             this.chart_Laptimes.Click += new System.EventHandler(this.chart_Laptimes_Click);
+            // 
+            // strategy1
+            // 
+            this.strategy1.AllowUserToResizeColumns = false;
+            this.strategy1.AllowUserToResizeRows = false;
+            this.strategy1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.strategy1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.strategy1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PitLap});
+            this.strategy1.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.strategy1.Location = new System.Drawing.Point(52, 71);
+            this.strategy1.MultiSelect = false;
+            this.strategy1.Name = "strategy1";
+            this.strategy1.RowHeadersVisible = false;
+            this.strategy1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.strategy1.RowTemplate.Height = 33;
+            this.strategy1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.strategy1.Size = new System.Drawing.Size(120, 272);
+            this.strategy1.TabIndex = 3;
+            this.strategy1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // PitLap
+            // 
+            this.PitLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PitLap.HeaderText = "Pit lap";
+            this.PitLap.MaxInputLength = 3;
+            this.PitLap.Name = "PitLap";
+            this.PitLap.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.PitLap.Width = 50;
+            // 
+            // strategy2
+            // 
+            this.strategy2.AllowUserToResizeColumns = false;
+            this.strategy2.AllowUserToResizeRows = false;
+            this.strategy2.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.strategy2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.strategy2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.strategy2.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.strategy2.Location = new System.Drawing.Point(245, 71);
+            this.strategy2.MultiSelect = false;
+            this.strategy2.Name = "strategy2";
+            this.strategy2.RowHeadersVisible = false;
+            this.strategy2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.strategy2.RowTemplate.Height = 33;
+            this.strategy2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.strategy2.Size = new System.Drawing.Size(118, 272);
+            this.strategy2.TabIndex = 3;
+            this.strategy2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Pit lap";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 3;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // strategy3
+            // 
+            this.strategy3.AllowUserToResizeColumns = false;
+            this.strategy3.AllowUserToResizeRows = false;
+            this.strategy3.BackgroundColor = System.Drawing.Color.Tomato;
+            this.strategy3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.strategy3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            this.strategy3.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.strategy3.Location = new System.Drawing.Point(447, 71);
+            this.strategy3.MultiSelect = false;
+            this.strategy3.Name = "strategy3";
+            this.strategy3.RowHeadersVisible = false;
+            this.strategy3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.strategy3.RowTemplate.Height = 33;
+            this.strategy3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.strategy3.Size = new System.Drawing.Size(114, 272);
+            this.strategy3.TabIndex = 3;
+            this.strategy3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Pit lap";
+            this.dataGridViewTextBoxColumn2.MaxInputLength = 3;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // TireWearCurve
+            // 
+            this.TireWearCurve.AllowUserToResizeColumns = false;
+            this.TireWearCurve.AllowUserToResizeRows = false;
+            this.TireWearCurve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.TireWearCurve.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Wear,
+            this.LapFactor});
+            this.TireWearCurve.Location = new System.Drawing.Point(24, 95);
+            this.TireWearCurve.MultiSelect = false;
+            this.TireWearCurve.Name = "TireWearCurve";
+            this.TireWearCurve.RowHeadersVisible = false;
+            this.TireWearCurve.RowHeadersWidth = 35;
+            this.TireWearCurve.RowTemplate.Height = 33;
+            this.TireWearCurve.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TireWearCurve.Size = new System.Drawing.Size(248, 360);
+            this.TireWearCurve.TabIndex = 1;
+            this.TireWearCurve.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            // 
+            // Wear
+            // 
+            this.Wear.HeaderText = "Wear%";
+            this.Wear.Name = "Wear";
+            this.Wear.Width = 60;
+            // 
+            // LapFactor
+            // 
+            this.LapFactor.HeaderText = "LapFactor";
+            this.LapFactor.Name = "LapFactor";
+            // 
+            // fuelWeightCurve
+            // 
+            this.fuelWeightCurve.AllowUserToResizeColumns = false;
+            this.fuelWeightCurve.AllowUserToResizeRows = false;
+            this.fuelWeightCurve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.fuelWeightCurve.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.fuelWeightCurve.Location = new System.Drawing.Point(308, 95);
+            this.fuelWeightCurve.MultiSelect = false;
+            this.fuelWeightCurve.Name = "fuelWeightCurve";
+            this.fuelWeightCurve.RowHeadersVisible = false;
+            this.fuelWeightCurve.RowHeadersWidth = 35;
+            this.fuelWeightCurve.RowTemplate.Height = 33;
+            this.fuelWeightCurve.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.fuelWeightCurve.Size = new System.Drawing.Size(248, 360);
+            this.fuelWeightCurve.TabIndex = 1;
+            this.fuelWeightCurve.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Fuel(Kg)";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "LapTime";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1474, 1079);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1926, 1079);
             this.Controls.Add(this.chart_Laptimes);
             this.Controls.Add(this.groupBox_Parameters);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(1500, 1150);
             this.Name = "FormMain";
             this.Text = "Orion Strategy Planning Tool";
@@ -427,6 +515,11 @@
             this.groupBox_TrackParam.ResumeLayout(false);
             this.groupBox_TrackParam.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Laptimes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strategy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strategy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strategy3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TireWearCurve)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fuelWeightCurve)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,17 +537,10 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -462,6 +548,18 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DataGridView strategy1;
+        private System.Windows.Forms.DataGridView strategy3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView strategy2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PitLap;
+        private System.Windows.Forms.DataGridView TireWearCurve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Wear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapFactor;
+        private System.Windows.Forms.DataGridView fuelWeightCurve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
 
